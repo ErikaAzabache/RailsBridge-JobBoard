@@ -11,6 +11,10 @@ class JobsController < ApplicationController
 		@job = Job.find(params[:id])
 	end
 
+	def update
+		redirect_to jobs_path
+	end
+
 	def create
 		Job.create(job_params)
 		redirect_to jobs_path
